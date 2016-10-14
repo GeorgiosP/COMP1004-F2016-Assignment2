@@ -52,6 +52,7 @@
     <Compile Include="AutoCenter.Designer.cs">
       <DependentUpon>AutoCenter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cars.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AutoCenter.resx">
