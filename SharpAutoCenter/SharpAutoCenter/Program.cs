@@ -9,13 +9,20 @@ namespace SharpAutoCenter
     static class Program
     {
         public static Cars car;
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            car = new Cars(); 
+         
+            car = new Cars();
+            car.CarPriceStandard = 23000;
+            car.CarPricePeral = 23500;
+            car.CarPriceCustomized = 24500;
+
+           
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

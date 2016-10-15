@@ -12,10 +12,12 @@ namespace SharpAutoCenter
 {
     public class Cars
     {
+        
         public int CarPriceStandard { get; set; }
 
         public int CarPricePeral { get; set; }
 
         public int CarPriceCustomized { get; set; }
+
     }
 }

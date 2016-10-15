@@ -51,7 +51,7 @@ namespace SharpAutoCenter
             this.TradeInAllowanceLabel = new System.Windows.Forms.Label();
             this.AmountDueLabel = new System.Windows.Forms.Label();
             this.BasePriceTextBox = new System.Windows.Forms.TextBox();
-            this.AdditionalOptions = new System.Windows.Forms.TextBox();
+            this.AdditionalOptionsTextBox = new System.Windows.Forms.TextBox();
             this.SubTotalTextBox = new System.Windows.Forms.TextBox();
             this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@ namespace SharpAutoCenter
             this.AmountDueTextBox = new System.Windows.Forms.TextBox();
             this.AdditionalitemsGroupBox = new System.Windows.Forms.GroupBox();
             this.ComputerNavigationCheckBox = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.LeatherInteriorCheckBox = new System.Windows.Forms.CheckBox();
             this.StereoSystemCheckBox = new System.Windows.Forms.CheckBox();
             this.ExteriorFinishGroupBox = new System.Windows.Forms.GroupBox();
             this.CustomizedDetailingRadioButton = new System.Windows.Forms.RadioButton();
@@ -68,6 +68,10 @@ namespace SharpAutoCenter
             this.CalculateButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.redToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calibriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.AdditionalitemsGroupBox.SuspendLayout();
             this.ExteriorFinishGroupBox.SuspendLayout();
@@ -98,8 +102,9 @@ namespace SharpAutoCenter
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -115,26 +120,34 @@ namespace SharpAutoCenter
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.calculateToolStripMenuItem.Text = "Calculate";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
+            this.fontToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calibriToolStripMenuItem,
+            this.ArialToolStripMenuItem});
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.fontToolStripMenuItem.Text = "Font...";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
+            this.colorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.redToolStripMenuItem,
+            this.orangeToolStripMenuItem});
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.colorToolStripMenuItem.Text = "Color...";
             // 
             // helpToolStripMenuItem
@@ -148,8 +161,9 @@ namespace SharpAutoCenter
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // BasePriceLabel
             // 
@@ -238,15 +252,15 @@ namespace SharpAutoCenter
             this.BasePriceTextBox.Size = new System.Drawing.Size(196, 31);
             this.BasePriceTextBox.TabIndex = 8;
             // 
-            // AdditionalOptions
+            // AdditionalOptionsTextBox
             // 
-            this.AdditionalOptions.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdditionalOptions.Location = new System.Drawing.Point(386, 104);
-            this.AdditionalOptions.Margin = new System.Windows.Forms.Padding(6);
-            this.AdditionalOptions.Name = "AdditionalOptions";
-            this.AdditionalOptions.ReadOnly = true;
-            this.AdditionalOptions.Size = new System.Drawing.Size(196, 31);
-            this.AdditionalOptions.TabIndex = 9;
+            this.AdditionalOptionsTextBox.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdditionalOptionsTextBox.Location = new System.Drawing.Point(386, 104);
+            this.AdditionalOptionsTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.AdditionalOptionsTextBox.Name = "AdditionalOptionsTextBox";
+            this.AdditionalOptionsTextBox.ReadOnly = true;
+            this.AdditionalOptionsTextBox.Size = new System.Drawing.Size(196, 31);
+            this.AdditionalOptionsTextBox.TabIndex = 9;
             // 
             // SubTotalTextBox
             // 
@@ -300,7 +314,7 @@ namespace SharpAutoCenter
             // AdditionalitemsGroupBox
             // 
             this.AdditionalitemsGroupBox.Controls.Add(this.ComputerNavigationCheckBox);
-            this.AdditionalitemsGroupBox.Controls.Add(this.checkBox2);
+            this.AdditionalitemsGroupBox.Controls.Add(this.LeatherInteriorCheckBox);
             this.AdditionalitemsGroupBox.Controls.Add(this.StereoSystemCheckBox);
             this.AdditionalitemsGroupBox.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdditionalitemsGroupBox.Location = new System.Drawing.Point(704, 53);
@@ -322,17 +336,19 @@ namespace SharpAutoCenter
             this.ComputerNavigationCheckBox.TabIndex = 2;
             this.ComputerNavigationCheckBox.Text = "Computer Navigation";
             this.ComputerNavigationCheckBox.UseVisualStyleBackColor = true;
+            this.ComputerNavigationCheckBox.CheckedChanged += new System.EventHandler(this.ComputerNavigationCheckBox_CheckedChanged);
             // 
-            // checkBox2
+            // LeatherInteriorCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(56, 75);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(278, 27);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "LeatherInteriorCheckBox";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.LeatherInteriorCheckBox.AutoSize = true;
+            this.LeatherInteriorCheckBox.Location = new System.Drawing.Point(56, 75);
+            this.LeatherInteriorCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.LeatherInteriorCheckBox.Name = "LeatherInteriorCheckBox";
+            this.LeatherInteriorCheckBox.Size = new System.Drawing.Size(186, 27);
+            this.LeatherInteriorCheckBox.TabIndex = 1;
+            this.LeatherInteriorCheckBox.Text = "Leather Interior";
+            this.LeatherInteriorCheckBox.UseVisualStyleBackColor = true;
+            this.LeatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this.LeatherInteriorCheckBox_CheckedChanged);
             // 
             // StereoSystemCheckBox
             // 
@@ -344,6 +360,7 @@ namespace SharpAutoCenter
             this.StereoSystemCheckBox.TabIndex = 0;
             this.StereoSystemCheckBox.Text = "Stereo System";
             this.StereoSystemCheckBox.UseVisualStyleBackColor = true;
+            this.StereoSystemCheckBox.CheckedChanged += new System.EventHandler(this.StereoSystemCheckBox_CheckedChanged);
             // 
             // ExteriorFinishGroupBox
             // 
@@ -409,6 +426,7 @@ namespace SharpAutoCenter
             this.CalculateButton.TabIndex = 17;
             this.CalculateButton.Text = "Calcualte";
             this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // ClearButton
             // 
@@ -420,6 +438,7 @@ namespace SharpAutoCenter
             this.ClearButton.TabIndex = 18;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // ExitButton
             // 
@@ -431,6 +450,35 @@ namespace SharpAutoCenter
             this.ExitButton.TabIndex = 19;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // redToolStripMenuItem
+            // 
+            this.redToolStripMenuItem.Name = "redToolStripMenuItem";
+            this.redToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.redToolStripMenuItem.Text = "Red";
+            this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
+            // 
+            // orangeToolStripMenuItem
+            // 
+            this.orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
+            this.orangeToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.orangeToolStripMenuItem.Text = "Orange";
+            this.orangeToolStripMenuItem.Click += new System.EventHandler(this.orangeToolStripMenuItem_Click);
+            // 
+            // calibriToolStripMenuItem
+            // 
+            this.calibriToolStripMenuItem.Name = "calibriToolStripMenuItem";
+            this.calibriToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.calibriToolStripMenuItem.Text = "Calibri";
+            this.calibriToolStripMenuItem.Click += new System.EventHandler(this.calibriToolStripMenuItem_Click);
+            // 
+            // ArialToolStripMenuItem
+            // 
+            this.ArialToolStripMenuItem.Name = "ArialToolStripMenuItem";
+            this.ArialToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.ArialToolStripMenuItem.Text = "Arial";
+            this.ArialToolStripMenuItem.Click += new System.EventHandler(this.ArialToolStripMenuItem_Click);
             // 
             // AutoCenter
             // 
@@ -447,7 +495,7 @@ namespace SharpAutoCenter
             this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.SalesTaxTextBox);
             this.Controls.Add(this.SubTotalTextBox);
-            this.Controls.Add(this.AdditionalOptions);
+            this.Controls.Add(this.AdditionalOptionsTextBox);
             this.Controls.Add(this.BasePriceTextBox);
             this.Controls.Add(this.AmountDueLabel);
             this.Controls.Add(this.TradeInAllowanceLabel);
@@ -494,7 +542,7 @@ namespace SharpAutoCenter
         private System.Windows.Forms.Label TradeInAllowanceLabel;
         private System.Windows.Forms.Label AmountDueLabel;
         private System.Windows.Forms.TextBox BasePriceTextBox;
-        private System.Windows.Forms.TextBox AdditionalOptions;
+        private System.Windows.Forms.TextBox AdditionalOptionsTextBox;
         private System.Windows.Forms.TextBox SubTotalTextBox;
         private System.Windows.Forms.TextBox SalesTaxTextBox;
         private System.Windows.Forms.TextBox TotalTextBox;
@@ -503,7 +551,7 @@ namespace SharpAutoCenter
         private System.Windows.Forms.GroupBox AdditionalitemsGroupBox;
         private System.Windows.Forms.GroupBox ExteriorFinishGroupBox;
         private System.Windows.Forms.CheckBox ComputerNavigationCheckBox;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox LeatherInteriorCheckBox;
         private System.Windows.Forms.CheckBox StereoSystemCheckBox;
         private System.Windows.Forms.RadioButton CustomizedDetailingRadioButton;
         private System.Windows.Forms.RadioButton PearlizedRadioButton;
@@ -511,6 +559,10 @@ namespace SharpAutoCenter
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orangeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calibriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ArialToolStripMenuItem;
     }
 }
 
